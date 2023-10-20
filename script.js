@@ -9,7 +9,7 @@ const incomplete = document.querySelector('.incomplete ')
 
 subscribe.addEventListener('click', ()=>{
     const inputValue = input.value 
-    if(!inputValue.includes('@')){
+    if(!inputValue.includes('@' && '.')){
         validEmail.classList.remove('dark')
         validEmail.classList.add('error')
         dangerToggle.classList.add('danger')

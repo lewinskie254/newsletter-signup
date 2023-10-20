@@ -7,9 +7,12 @@ const dismiss = document.querySelector('.dismiss')
 const incomplete = document.querySelector('.incomplete ')
 
 
+
+var regex = /^([a-zA-Z0-9\.-]+)@([[a-zA-Z0-9\.-]+).([a-z]{2,20})(\.[a-z]{2,8})$/
+
 subscribe.addEventListener('click', ()=>{
     const inputValue = input.value 
-    if(!inputValue.includes('@')){
+    if(!regex.test(inputValue)){
         validEmail.classList.remove('dark')
         validEmail.classList.add('error')
         dangerToggle.classList.add('danger')

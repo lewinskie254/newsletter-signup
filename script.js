@@ -5,7 +5,7 @@ const validEmail = document.querySelector('.dark')
 const subscribe= document.querySelector('.subscribe')
 const dismiss = document.querySelector('.dismiss')
 const incomplete = document.querySelector('.incomplete ')
-
+const spanContent = document.querySelector('.sent-mail')
 
 
 var regex = /^([a-zA-Z0-9\.-]+)@([[a-zA-Z0-9\.-]+).([a-z]{2,20})(\.[a-z]{2,8})$/
@@ -21,6 +21,7 @@ subscribe.addEventListener('click', ()=>{
         incomplete.classList.add('hide')
         modal.classList.remove('modal')
         modal.classList.add('successful')
+        spanContent.textContent = inputValue
     }
 })
 
